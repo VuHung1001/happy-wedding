@@ -15,7 +15,7 @@ const Section = styled('section', {
 
 const Layout = styled('div', {
   width: '100%',
-  color: '#5D4037',
+  color: 'white',
   textAlign: 'center',
   marginTop: '3.5%',
   animation: 'fadein 2.5s',
@@ -25,22 +25,22 @@ const Layout = styled('div', {
 
 const TitleLayout = styled('p', {
   width: '100%',
-  fontSize: isPortrait ? '1.9rem' : '3.5em',
+  fontSize: isPortrait ? '1.9rem' : '7.5em',
   margin: 0,
-  fontWeight: '500',
-  fontFamily: 'Alex',
+  fontWeight: '700',
+  fontFamily:'Alex'
 });
 
 const SubTitleLayout = styled('p', {
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '',
+  fontSize: isPortrait ? '1.2em' : '3em',
   margin: '16px 0',
-  fontWeight: '300',
+  fontWeight: '500',
 });
 const SubTitleLayout1 = styled('p', {
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '2em',
-  fontWeight: '300',
+  fontSize: isPortrait ? '1.2em' : '6em',
+  fontWeight: '500',
   margin: 0,
 });
 
@@ -65,6 +65,7 @@ const Image = styled('img', {
   margin: 'auto auto 0 auto',
   maxHeight: '100%',
   maxWidth: '100%',
+  objectPosition: isPortrait ?'':'0 20%'
 });
 
 type TitleProps = {
@@ -91,7 +92,8 @@ const Title = ({ config }: TitleProps) => {
           <TitleLayout>
             {config.groom.name} &amp; {config.bride.name}
           </TitleLayout>
-          <SubTitleLayout>Trân trọng kính mời</SubTitleLayout>
+          <SubTitleLayout>SAVE THE DATE</SubTitleLayout>
+          <TitleLayout>24 - 09 - 23</TitleLayout>
           {/* <BlockInfo>
             <SubTitleLayout className='zz'>
               <SubTitleLayout1>Nhà trai</SubTitleLayout1>

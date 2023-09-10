@@ -43,7 +43,7 @@ const Gallery = ({ config }: GalleryProps) => {
       }}
     >
       <Layout>
-        <Title>Những khoảnh khắc đẹp của chúng tôi</Title>
+        <Title>Our beautiful memories</Title>
       </Layout>
       <Row gutter={[16, 16]}>
         {config.galleryImages.map((image, index) => (

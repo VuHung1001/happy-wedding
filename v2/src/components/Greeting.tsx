@@ -24,6 +24,12 @@ const Title = styled('p', {
   fontFamily: 'Alex'
 });
 
+const Thiep = styled('div', {
+  fontSize: '2rem',
+  fontFamily: 'Alex',
+  textAlign: 'center'
+});
+
 
 type GreetingProps = {
   config: ConfigsType;
@@ -48,10 +54,12 @@ const Greeting = ({ config }: GreetingProps) => {
         <Title>Sự kiện cưới</Title>
         <div className={`oo ${isPortrait ? 'isPortrait' : ''}`}>
           <div>
+          <Thiep>Hoàng Luân</Thiep>
             <img src={thiepNhaTrai} alt="Wedding Invitation Title Picutre" />
 
           </div>
           <div>
+          <Thiep>Thanh Hà</Thiep>
             <img src={n} alt="Wedding Invitation Title Picutre" />
 
           </div>

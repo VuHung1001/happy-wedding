@@ -14,9 +14,12 @@ declare global {
 const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Section = styled('section', {
-  background: '#EFEBE9',
+  background: '#faefeb',
   overflow: 'hidden',
   position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const Layout = styled('div', {
@@ -78,21 +81,11 @@ const Share = ({ config }: ShareProps) => {
   
   return (
     <Section>
-      <Layout>
-        <Title>Chia sẻ lời mời đám cưới của bạn</Title>
-      </Layout>
-      <ButtonGroup>
-        <CopyToClipboard text={config.url}>
-          <LinkShareButton
-            style={{ margin: 8 }}
-            icon={<LinkOutlined />}
-            size="large"
-            onClick={() => message.success('Liên kết lời mời đám cưới đã được sao chép.')}
-          >
-            Chia sẻ với liên kết
-          </LinkShareButton>
-        </CopyToClipboard>
-      </ButtonGroup>
+       <img
+          style={{ width: isPortrait ? '100%' : '60%',display:'block', padding:'0 0 20px 0' }}
+          src={config.ThankYou}
+          alt="Wedding Invitation Title Picutre"
+        />
     </Section>
   );
 };

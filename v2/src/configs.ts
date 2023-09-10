@@ -10,6 +10,7 @@ import GalleryPhoto5 from './resources/Gallery_Photo_5.png';
 import GalleryPhoto6 from './resources/Gallery_Photo_6.png';
 import GalleryPhoto7 from './resources/Gallery_Photo_7.png';
 import GalleryPhoto8 from './resources/Gallery_Photo_8.png';
+import ThankYou from './resources/ThankYou.png';
 
 const Configs: ConfigsType = {
   url: 'http://localhost:3000',
@@ -25,7 +26,7 @@ const Configs: ConfigsType = {
   },
   bride: {
     name: 'Thanh Hà',
-    accountNumber: '1903 6446 3000 11',
+    accountNumber: '19036446300011',
     fatherName: 'Nguyễn Văn Sông',
     fatherAccountNumber: '○○은행 ***-***-******',
     motherName: 'Phạm Thị Hằng',
@@ -34,6 +35,7 @@ const Configs: ConfigsType = {
     weddingLocation: 'Địch Tràng , Đức Chính, Cẩm Giàng, Hải Dương',
   },
   titleImage: TitleImage,
+  ThankYou: ThankYou,
 //   locationMapImage: LocationMapImage,
   galleryImages: [
     GalleryPhoto1,
@@ -54,6 +56,7 @@ export type ConfigsType = {
   groom: Person;
   bride: Person;
   titleImage: string;
+  ThankYou: string;
 //   locationMapImage: string;
   galleryImages: string[];
   qrCodeBride: string,

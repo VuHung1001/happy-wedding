@@ -11,6 +11,7 @@ const Section = styled('section', {
   background: '#EFEBE9',
   overflow: 'hidden',
   position: 'relative',
+  backGround: '#f3f7fa'
 });
 
 const Layout = styled('div', {
@@ -59,11 +60,11 @@ const CongratulatoryMoney = ({ config }: CongratulatoryMoneyProps) => {
     <Section>
       <Layout>
         <Title>Gửi lời chúc mừng của bạn</Title>
-        <SubTitle>Hãy gửi một món quà để bày tỏ lời chúc mừng của bạn.</SubTitle>
+        <SubTitle>Cảm ơn bạn vì những lời chúc tốt đẹp.</SubTitle>
       </Layout>
       <GridLayout>
-        <HongBao title="Chú rể" subTitle="Kiểm tra số tài khoản" onClick={() => setGroomVisible(true)} />
-        <HongBao title="Cô dâu" subTitle="Kiểm tra số tài khoản" onClick={() => setBrideVisible(true)} />
+        <HongBao title="Chú rể" subTitle="Mừng cưới" onClick={() => setGroomVisible(true)} />
+        <HongBao title="Cô dâu" subTitle="Mừng cưới" onClick={() => setBrideVisible(true)} />
       </GridLayout>
       <Modal
         title={<b>Số tài khoản chú rể</b>}
