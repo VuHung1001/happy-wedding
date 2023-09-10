@@ -52,7 +52,7 @@ const Location = ({ config }: LocationProps) => {
               <iframe className="gmap_iframe" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=20.951485, 106.252930&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             </div>
           </div>
-          <Phone>Phone: 0343151097 (Thanh Hà)</Phone>
+          <Phone>Phone: 0343151097 (Hoàng Luân)</Phone>
         </div>
 
         <div style={{width: '100%', flexGrow: '1'}}>
@@ -62,7 +62,7 @@ const Location = ({ config }: LocationProps) => {
               <iframe className="gmap_iframe" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=20.970402, 106.268546&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             </div>
           </div>
-          <Phone>Phone: 0336927950 (Hoàng Luân)</Phone>
+          <Phone>Phone: 0336927950 (Thanh Hà)</Phone>
         </div>
 
       </Layout>
