@@ -29,17 +29,27 @@ const TitleLayout = styled('p', {
 
 const SubTitleLayout = styled('p', {
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '2em',
+  fontSize: isPortrait ? '1.2em' : '',
   margin: '24px 0',
   fontWeight: '300',
+});
+const SubTitleLayout1 = styled('p', {
+  width: '100%',
+  fontSize: isPortrait ? '1.2em' : '2em',
+  fontWeight: '300',
+  margin: 0,
 });
 
 const ImageLayout = styled('div', {
   width: '100%',
   background: '#DADADA',
-  bottom: '-5px',
   textAlign: 'center',
   position: 'absolute',
+});
+
+const BlockInfo = styled('div', {
+  display: isPortrait ? '' : 'flex',
+  justifyContent: isPortrait ? '': 'space-around'
 });
 
 const Image = styled('img', {
@@ -70,11 +80,27 @@ const Title = ({ config }: TitleProps) => {
           <TitleLayout>
             {config.groom.name} &amp; {config.bride.name}
           </TitleLayout>
-          <SubTitleLayout>
-            {config.weddingDate}
-            <br />
-            {config.weddingLocation}
-          </SubTitleLayout>
+          <SubTitleLayout>Trân trọng kính mời</SubTitleLayout>
+          <BlockInfo>
+            <SubTitleLayout>
+              <SubTitleLayout1>Nhà trai</SubTitleLayout1>
+              <br />
+              Tới dự bữa cơm thân mật vào: {config.groom.weddingDate}
+              <br />
+              Lễ vu quy được tổ chức vào: 12h Chủ Nhật, 24.09.2023
+              <br />
+              {config.groom.weddingLocation}
+            </SubTitleLayout>
+            <SubTitleLayout>
+            <SubTitleLayout1>Nhà gái</SubTitleLayout1>
+              <br />
+              Tới dự bữa cơm thân mật vào: {config.bride.weddingDate}
+              <br />
+              Lễ vu quy được tổ chức vào: 12h Chủ Nhật, 24.09.2023
+              <br/>
+              {config.bride.weddingLocation}
+            </SubTitleLayout>
+          </BlockInfo>
         </Layout>
         <ImageLayout>
           <Image src={config.titleImage} alt="Wedding Invitation Title Picutre" />

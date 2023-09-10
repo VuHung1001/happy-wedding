@@ -58,23 +58,23 @@ const CongratulatoryMoney = ({ config }: CongratulatoryMoneyProps) => {
   return (
     <Section>
       <Layout>
-        <Title>축하의 마음을 전하세요</Title>
-        <SubTitle>축하의 마음을 담아 축의금을 전달해 보세요.</SubTitle>
+        <Title>Gửi lời chúc mừng của bạn</Title>
+        <SubTitle>Hãy gửi một món quà để bày tỏ lời chúc mừng của bạn.</SubTitle>
       </Layout>
       <GridLayout>
-        <HongBao title="신랑측" subTitle="계좌번호 확인" onClick={() => setGroomVisible(true)} />
-        <HongBao title="신부측" subTitle="계좌번호 확인" onClick={() => setBrideVisible(true)} />
+        <HongBao title="Chú rể" subTitle="Kiểm tra số tài khoản" onClick={() => setGroomVisible(true)} />
+        <HongBao title="Cô dâu" subTitle="Kiểm tra số tài khoản" onClick={() => setBrideVisible(true)} />
       </GridLayout>
       <Modal
-        title={<b>신랑측 계좌번호</b>}
+        title={<b>Số tài khoản chú rể</b>}
         open={groomVisible}
         onOk={() => setGroomVisible(false)}
         onCancel={() => setGroomVisible(false)}
         cancelButtonProps={{ style: { display: 'none' } }}
         okButtonProps={{ style: { display: 'none' } }}
-        footer={[<Description>계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.</Description>]}
+        footer={[<Description>Bấm vào số tài khoản để sao chép</Description>]}
       >
-        <div>
+        {/* <div>
           <b>부) {config.groom.fatherName}</b>
           <Divider type="vertical" />
           <CopyToClipboard text={config.groom.fatherAccountNumber || ''}>
@@ -99,31 +99,37 @@ const CongratulatoryMoney = ({ config }: CongratulatoryMoneyProps) => {
               {config.groom.motherAccountNumber || ''}
             </Button>
           </CopyToClipboard>
-        </div>
+        </div> */}
         <div>
-          <b>신랑 {config.groom.name}</b>
-          <Divider type="vertical" />
+          <b>Chú rể: {config.groom.name}</b>
+          <div>Ngân hàng: Viettinbank</div>
           <CopyToClipboard text={config.groom.accountNumber}>
             <Button
               type="text"
               style={{ padding: 0, margin: 0 }}
-              onClick={() => message.success('계좌번호가 복사되었습니다.')}
+              onClick={() => message.success('Số tài khoản đã được sao chép.')}
             >
-              {config.groom.accountNumber}
+            Số tài khoản: {config.groom.accountNumber}
             </Button>
           </CopyToClipboard>
+          <br/>
+          <img
+            style={{ width: isPortrait ? '100%' : '60%' }}
+            src={config.qrCodeGroom}
+            alt="Wedding Invitation Title Picutre"
+          />
         </div>
       </Modal>
       <Modal
-        title={<b>신부측 계좌번호</b>}
+        title={<b>Số tài khoản cô dâu</b>}
         open={brideVisible}
         onOk={() => setBrideVisible(false)}
         onCancel={() => setBrideVisible(false)}
         cancelButtonProps={{ style: { display: 'none' } }}
         okButtonProps={{ style: { display: 'none' } }}
-        footer={[<Description>계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.</Description>]}
+        footer={[<Description>Bấm vào số tài khoản để sao chép</Description>]}
       >
-        <div>
+        {/* <div>
           <b>부) {config.bride.fatherName}</b>
           <Divider type="vertical" />
           <CopyToClipboard text={config.bride.fatherAccountNumber || ''}>
@@ -148,19 +154,25 @@ const CongratulatoryMoney = ({ config }: CongratulatoryMoneyProps) => {
               {config.bride.motherAccountNumber || ''}
             </Button>
           </CopyToClipboard>
-        </div>
+        </div> */}
         <div>
-          <b>신부 {config.bride.name}</b>
-          <Divider type="vertical" />
+          <b>Cô dâu {config.bride.name}</b>
+          <div>Ngân hàng: Techcombank</div>
           <CopyToClipboard text={config.bride.accountNumber}>
             <Button
               type="text"
               style={{ padding: 0, margin: 0 }}
-              onClick={() => message.success('계좌번호가 복사되었습니다.')}
+              onClick={() => message.success('Số tài khoản đã được sao chép.')}
             >
-              {config.bride.accountNumber}
+              Số tài khoản: {config.bride.accountNumber}
             </Button>
           </CopyToClipboard>
+          <br/>
+          <img
+            style={{ width: isPortrait ? '100%' : '60%' }}
+            src={config.qrCodeBride}
+            alt="Wedding Invitation Title Picutre"
+          />
         </div>
       </Modal>
     </Section>

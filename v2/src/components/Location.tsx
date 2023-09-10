@@ -42,7 +42,20 @@ const Location = ({ config }: LocationProps) => {
   return (
     <Section ref={ref}>
       <Layout>
-        <Title>오시는 길</Title>
+        <Title>Đường tới nhà trai</Title>
+        <SubTitle>
+          <br />
+          <br />
+          국회의사당역 3번 출구로 나오셔서
+          <br />
+          도보로 6분 거리입니다.
+          <br />
+          <br />
+          <div>Map nhà trai</div>
+        </SubTitle>
+      </Layout>
+      <Layout>
+        <Title>Đường tới nhà gái</Title>
         <SubTitle>
           서울특별시 영등포구 은행로 30
           <br />
@@ -52,11 +65,7 @@ const Location = ({ config }: LocationProps) => {
           도보로 6분 거리입니다.
           <br />
           <br />
-          <img
-            style={{ width: isPortrait ? '90%' : '60%' }}
-            src={config.locationMapImage}
-            alt="Wedding Invitation Title Picutre"
-          />
+          <div>Map nhà gái</div>
         </SubTitle>
       </Layout>
     </Section>

@@ -47,28 +47,40 @@ const Greeting = ({ config }: GreetingProps) => {
       }}
     >
       <Layout>
-        <Title>결혼합니다</Title>
+        <Title>Chúng tôi sắp kết hôn</Title>
         <SubTitle>
-          봄에 태어난 {config.bride.name}
+          Sinh vào mùa Xuân: {config.bride.name}
           <br />
-          가을에 태어난 {config.groom.name}
-          <br />
-          <br />
-          관심사도, 가치관도 달랐던 두 사람
-          <br />
-          사랑으로 닮은 꼴이 되어
-          <br />
-          인생이라는 여행을 함께 떠나려 합니다.
+          Sinh vào mùa Thu: {config.groom.name}
           <br />
           <br />
-          따뜻한 격려와 축복으로
+          Hai người có sở thích và giá trị khác nhau
           <br />
-          힘찬 출발의 자리를 빛내주시기 바랍니다.
+          Chúng ta trở nên giống nhau nhờ tình yêu
+          <br />
+          Chúng ta sắp bắt đầu một cuộc hành trình mang tên cuộc sống cùng nhau.
           <br />
           <br />
-          {config.groom.fatherName} · {config.groom.motherName}의 아들 {config.groom.name}
+          Với sự khuyến khích và phước lành ấm áp
           <br />
-          {config.bride.fatherName} · {config.bride.motherName}의 딸 {config.bride.name}
+          Tôi hy vọng bạn thích sự khởi đầu mạnh mẽ này.
+          <br />
+          <br />
+          <div style={{
+            display: 'flex',
+            justifyContent: "space-around"
+          }}>
+            <div>
+              <div>Nhà trai</div>
+              <div>Ông: {config.groom.fatherName}</div>
+              <div>Bà: {config.groom.motherName}</div>
+            </div>
+            <div>
+              <div>Nhà Gái</div>
+              <div>Ông: {config.bride.fatherName}</div>
+              <div>Bà: {config.bride.motherName}</div>
+            </div>
+          </div>
         </SubTitle>
       </Layout>
     </section>

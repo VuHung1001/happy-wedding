@@ -75,67 +75,21 @@ type ShareProps = {
 };
 
 const Share = ({ config }: ShareProps) => {
-  const [shareCount, setShareCount] = useState<number>(0);
-
-  if (!window.Kakao.isInitialized()) {
-    window.Kakao.init(config.kakaoToken);
-  }
-
-  useEffect(() => {
-    if (shareCount !== 0) {
-      window.Kakao.Share.createDefaultButton({
-        objectType: 'feed',
-        container: '#sendKakao',
-        content: {
-          title: `${config.groom.name}❤${config.bride.name} 결혼식에 초대합니다`,
-          description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
-          imageUrl: config.kakaoImage,
-          link: {
-            mobileWebUrl: config.url,
-            webUrl: config.url,
-          },
-        },
-        buttons: [
-          {
-            title: '청첩장 열기',
-            link: {
-              mobileWebUrl: config.url,
-              webUrl: config.url,
-            },
-          },
-        ],
-        installTalk: true,
-      });
-      setTimeout(() => {
-        document.getElementById('sendKakao')?.click();
-        message.success('카카오톡으로 청첩장을 공유합니다!');
-      }, 100);
-    }
-  }, [config, shareCount]);
-
+  
   return (
     <Section>
       <Layout>
-        <Title>청첩장 공유하기</Title>
+        <Title>Chia sẻ lời mời đám cưới của bạn</Title>
       </Layout>
       <ButtonGroup>
-        <KakaoTalkShareButton
-          style={{ margin: 8 }}
-          icon={<MessageFilled />}
-          id="sendKakao"
-          size="large"
-          onClick={() => setShareCount(shareCount + 1)}
-        >
-          카카오톡으로 공유하기
-        </KakaoTalkShareButton>
         <CopyToClipboard text={config.url}>
           <LinkShareButton
             style={{ margin: 8 }}
             icon={<LinkOutlined />}
             size="large"
-            onClick={() => message.success('청첩장 링크가 복사되었습니다.')}
+            onClick={() => message.success('Liên kết lời mời đám cưới đã được sao chép.')}
           >
-            링크로 공유하기
+            Chia sẻ với liên kết
           </LinkShareButton>
         </CopyToClipboard>
       </ButtonGroup>

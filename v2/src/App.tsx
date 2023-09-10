@@ -25,7 +25,7 @@ function App() {
           textAlign: 'center',
         }}
       >
-        Copyright © 2021 KyuHyuk Lee
+        Hoàng Luân ❤ Thanh Hà
       </Footer>
     </main>
   );
