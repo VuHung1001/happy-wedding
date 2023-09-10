@@ -28,6 +28,7 @@ const TitleLayout = styled('p', {
   fontSize: isPortrait ? '1.9rem' : '3.5em',
   margin: 0,
   fontWeight: '500',
+  fontFamily: 'Alex',
 });
 
 const SubTitleLayout = styled('p', {
