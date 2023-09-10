@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { styled } from '@stitches/react';
 import { ConfigsType } from '../configs';
 
@@ -12,7 +12,11 @@ const Section = styled('section', {
 
 const Layout = styled('div', {
   width: '100%',
-  padding: isPortrait ? '20% 0% 15% 5%' : '5% 0% 5% 10%',
+  padding: isPortrait ? '40px 20px 10px' : '180px',
+  display: 'flex',
+  flexDirection: isPortrait ? 'column' : 'row',
+  height: '100%',
+  gap: '30px'
 });
 
 const Title = styled('p', {
@@ -21,15 +25,7 @@ const Title = styled('p', {
   fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
-});
-
-const SubTitle = styled('p', {
-  color: '#795548',
-  width: '100%',
-  fontSize: isPortrait ? '1.2em' : '2em',
-  margin: '24px 0',
-  fontWeight: '300',
-  lineHeight: 1.8,
+  marginBottom: '20px'
 });
 
 type LocationProps = {
@@ -38,35 +34,27 @@ type LocationProps = {
 
 const Location = ({ config }: LocationProps) => {
   const ref = useRef<HTMLSelectElement>(null);
-
   return (
     <Section ref={ref}>
       <Layout>
-        <Title>Đường tới nhà trai</Title>
-        <SubTitle>
-          <br />
-          <br />
-          국회의사당역 3번 출구로 나오셔서
-          <br />
-          도보로 6분 거리입니다.
-          <br />
-          <br />
-          <div>Map nhà trai</div>
-        </SubTitle>
-      </Layout>
-      <Layout>
-        <Title>Đường tới nhà gái</Title>
-        <SubTitle>
-          서울특별시 영등포구 은행로 30
-          <br />
-          <br />
-          국회의사당역 3번 출구로 나오셔서
-          <br />
-          도보로 6분 거리입니다.
-          <br />
-          <br />
-          <div>Map nhà gái</div>
-        </SubTitle>
+        <div style={{width: '100%', flexGrow: '1'}}>
+          <Title>Đường tới nhà trai</Title>
+          <div className="mapouter">
+            <div className="gmap_canvas">
+              <iframe className="gmap_iframe" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=20.951485, 106.252930&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div style={{width: '100%', flexGrow: '1'}}>
+          <Title>Đường tới nhà gái</Title>
+          <div className="mapouter">
+            <div className="gmap_canvas">
+              <iframe className="gmap_iframe" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=20.970402, 106.268546&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+
       </Layout>
     </Section>
   );

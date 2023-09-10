@@ -6,7 +6,6 @@ import CongratulatoryMoney from './components//CongratulatoryMoney';
 import Configs from './configs';
 import Share from './components/Share';
 import { Layout } from 'antd';
-
 const { Footer } = Layout;
 
 function App() {
@@ -23,9 +22,15 @@ function App() {
           background: '#D7CCC8',
           opacity: 0.6,
           textAlign: 'center',
+          position: 'fixed',
+          bottom: '0',
+          width: '100%',
+          fontFamily: 'Alex',
+          fontSize: '1.4rem',
+          padding: '10px 50px'
         }}
       >
-        Hoàng Luân ❤ Thanh Hà
+        Hoàng Luân &nbsp;<span style={{color: 'red'}}>❤</span>&nbsp; Thanh Hà
       </Footer>
     </main>
   );
