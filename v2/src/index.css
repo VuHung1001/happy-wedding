@@ -97,7 +97,8 @@ main > section {
 
 .oo img {
   display: block;
-  max-width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .mapouter {
@@ -110,8 +111,33 @@ main > section {
   overflow: hidden;
   background: none !important;
   width: 100%;
+  text-align: left;
 }
 .gmap_iframe {
-  width: 100% !important;
+  width: 80% !important;
   border: 1px solid #f1f6df;
+}
+/* Thiết lập kiểu nền và màu chữ */
+.map {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db; /* Màu nền của nút */
+  color: #fff; /* Màu chữ trắng */
+  text-decoration: none; /* Loại bỏ đường gạch chân mặc định */
+  border-radius: 5px; /* Đường viền cong để tạo hình dáng nút */
+  transition: background-color 0.3s ease; /* Hiệu ứng khi di chuột qua nút */
+  text-decoration: none;
+}
+
+/* Thiết lập kiểu nút khi di chuột qua */
+.map:hover {
+  background-color: #2980b9; /* Màu nền khi di chuột qua */
+}
+.hoho {
+  width: 200px;
+  height: 200px;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right bottom, #faefeb, #bec8b6);
+  padding: 10px;
 }

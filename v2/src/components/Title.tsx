@@ -25,7 +25,7 @@ const Layout = styled('div', {
 
 const TitleLayout = styled('p', {
   width: '100%',
-  fontSize: isPortrait ? '1.9rem' : '7.5em',
+  fontSize: isPortrait ? '2.9rem' : '7.5em',
   margin: 0,
   fontWeight: '700',
   fontFamily:'Alex'
@@ -33,13 +33,13 @@ const TitleLayout = styled('p', {
 
 const SubTitleLayout = styled('p', {
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '3em',
+  fontSize: isPortrait ? '2.2em' : '3em',
   margin: '16px 0',
   fontWeight: '500',
 });
 const SubTitleLayout1 = styled('p', {
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '6em',
+  fontSize: isPortrait ? '2.2em' : '6em',
   fontWeight: '500',
   margin: 0,
 });

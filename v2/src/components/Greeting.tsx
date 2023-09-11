@@ -10,7 +10,7 @@ const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 const Layout = styled('div', {
   width: '100%',
   height: '100%',
-  padding: isPortrait ? '20px 20px' : '60px 40px 60px',
+  padding: isPortrait ? '60px' : '60px 40px 60px',
   background: '#f1f6df',
 });
 
@@ -54,12 +54,12 @@ const Greeting = ({ config }: GreetingProps) => {
         <Title>Sự kiện cưới</Title>
         <div className={`oo ${isPortrait ? 'isPortrait' : ''}`}>
           <div>
-          <Thiep>Hoàng Luân</Thiep>
+            <Thiep>Hoàng Luân</Thiep>
             <img src={thiepNhaTrai} alt="Wedding Invitation Title Picutre" />
 
           </div>
           <div>
-          <Thiep>Thanh Hà</Thiep>
+            <Thiep>Thanh Hà</Thiep>
             <img src={n} alt="Wedding Invitation Title Picutre" />
 
           </div>

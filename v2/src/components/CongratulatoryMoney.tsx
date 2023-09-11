@@ -16,7 +16,7 @@ const Section = styled('section', {
 
 const Layout = styled('div', {
   width: '100%',
-  padding: isPortrait ? '10% 0% 10% 5%' : '5% 0% 5% 10%',
+  padding: isPortrait ? '10% 0% 10% 5%' : '2% 0% 2% 4%',
 });
 
 const Title = styled('p', {
@@ -30,15 +30,16 @@ const Title = styled('p', {
 const SubTitle = styled('p', {
   color: '#795548',
   width: '100%',
-  fontSize: isPortrait ? '1.2em' : '2em',
+  fontSize: isPortrait ? '2em' : '2em',
   margin: '24px 0',
   fontWeight: '300',
   lineHeight: 1.8,
+  fontFamily: 'Alex'
 });
 
 const GridLayout = styled('div', {
-  display: 'grid',
-  gridTemplateColumns: '50% 50%',
+  display: isPortrait ?'grid':'flex',
+  gridTemplateColumns: isPortrait ?'50% 50%':'',
 });
 
 const Description = styled('p', {
@@ -60,7 +61,6 @@ const CongratulatoryMoney = ({ config }: CongratulatoryMoneyProps) => {
     <Section>
       <Layout>
         <Title>Gửi lời chúc mừng của bạn</Title>
-        <SubTitle>Cảm ơn bạn vì những lời chúc tốt đẹp.</SubTitle>
       </Layout>
       <GridLayout>
         <HongBao title="Chú rể" subTitle="Mừng cưới" onClick={() => setGroomVisible(true)} />
@@ -176,6 +176,9 @@ const CongratulatoryMoney = ({ config }: CongratulatoryMoneyProps) => {
           />
         </div>
       </Modal>
+      <Layout>
+        <SubTitle>Cảm ơn bạn vì những lời chúc tốt đẹp.</SubTitle>
+      </Layout>
     </Section>
   );
 };
