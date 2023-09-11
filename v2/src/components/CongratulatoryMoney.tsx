@@ -16,7 +16,8 @@ const Section = styled('section', {
 
 const Layout = styled('div', {
   width: '100%',
-  padding: isPortrait ? '10% 0% 10% 5%' : '2% 0% 2% 4%',
+  padding: isPortrait ? '10% 0% 10% 5%' : '2% 0% 2% 0%',
+  textAlign: 'center',
 });
 
 const Title = styled('p', {
@@ -25,6 +26,8 @@ const Title = styled('p', {
   fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
+  textAlign: 'center',
+  fontFamily: 'Alex'
 });
 
 const SubTitle = styled('p', {
@@ -115,7 +118,7 @@ const CongratulatoryMoney = ({ config }: CongratulatoryMoneyProps) => {
           </CopyToClipboard>
           <br/>
           <img
-            style={{ width: isPortrait ? '100%' : '60%' }}
+            style={{ width: isPortrait ? '80%' : '60%' }}
             src={config.qrCodeGroom}
             alt="Wedding Invitation Title Picutre"
           />
@@ -157,7 +160,7 @@ const CongratulatoryMoney = ({ config }: CongratulatoryMoneyProps) => {
           </CopyToClipboard>
         </div> */}
         <div>
-          <b>Cô dâu {config.bride.name}</b>
+          <b>Cô dâu: Nguyễn Hà</b>
           <div>Ngân hàng: Techcombank</div>
           <CopyToClipboard text={config.bride.accountNumber}>
             <Button
@@ -170,7 +173,7 @@ const CongratulatoryMoney = ({ config }: CongratulatoryMoneyProps) => {
           </CopyToClipboard>
           <br/>
           <img
-            style={{ width: isPortrait ? '100%' : '60%' }}
+            style={{ width: isPortrait ? '70%' : '60%' }}
             src={config.qrCodeBride}
             alt="Wedding Invitation Title Picutre"
           />

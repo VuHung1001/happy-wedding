@@ -10,15 +10,17 @@ const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 
 const Layout = styled('div', {
   width: '100%',
-  padding: isPortrait ? '15% 0% 15% 5%' : '5% 0% 5% 10%',
+  padding: isPortrait ? '10% 0% 10% 0%' : '1% 0%',
 });
 
 const Title = styled('p', {
-  color: '#FFFFFF',
+  color: '#795548',
   width: '100%',
   fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
+  textAlign: 'center',
+  fontFamily: 'Alex'
 });
 
 type GalleryProps = {
@@ -36,7 +38,7 @@ const Gallery = ({ config }: GalleryProps) => {
       ref={ref}
       style={{
         height: '100vh',
-        background: onScreen ? '#212121' : '#EFEBE9',
+        background: '#EFEBE9',
         overflow: 'hidden',
         position: 'relative',
         transition: 'background 1s ease-in',
@@ -47,8 +49,8 @@ const Gallery = ({ config }: GalleryProps) => {
       </Layout>
       <Row gutter={[16, 16]}>
         {config.galleryImages.map((image, index) => (
-          <Col key={index} span={isPortrait ? 6 : 3}>
-            <Image width={isPortrait ? width / 4 - 10 : width / 8 - 10} src={image} />
+          <Col key={index} span={isPortrait ? 12 : 6}>
+            <Image width={isPortrait ? width / 2 - 10 : width / 4 - 10} src={image} />
           </Col>
         ))}
       </Row>

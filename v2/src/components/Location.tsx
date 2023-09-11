@@ -25,7 +25,8 @@ const Title = styled('p', {
   fontSize: isPortrait ? '2.5em' : '3.5em',
   margin: 0,
   fontWeight: '500',
-  marginBottom: '20px'
+  marginBottom: '20px',
+  fontFamily: 'Alex'
 });
 const Map = styled('a', {
   display: "block",

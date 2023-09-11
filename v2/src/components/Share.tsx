@@ -24,7 +24,7 @@ const Section = styled('section', {
 
 const Layout = styled('div', {
   width: '100%',
-  padding: isPortrait ? '20% 0% 10% 5%' : '5% 0% 5% 10%',
+  padding: isPortrait ? '20% 0% 10% 0%' : '5% 0% 5% 0%',
 });
 
 const Title = styled('p', {

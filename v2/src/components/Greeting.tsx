@@ -10,7 +10,7 @@ const isPortrait = window.matchMedia('(orientation: portrait)').matches;
 const Layout = styled('div', {
   width: '100%',
   height: '100%',
-  padding: isPortrait ? '60px' : '60px 40px 60px',
+  padding: isPortrait ? '2%' : '2% 0',
   background: '#f1f6df',
 });
 
